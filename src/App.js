@@ -55,7 +55,7 @@ function App() {
               width: '200px', 
               border: '2px solid gray.200', 
               borderRadius: 'md', 
-              padding: '8px',
+              padding: '12px',
               fontSize: '16px', 
               backgroundColor: '#ebf0ef', 
             }}
