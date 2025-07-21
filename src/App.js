@@ -46,9 +46,12 @@ function App() {
     <i> <Text mt="2px" fontSize="14px" color="#393e40" fontWeight="normal" fontFamily="monospace"  textDecoration="underline" textDecorationColor="gray.400" > (For a Particlar select a Country from below)</Text> </i>
 </Box>
 <Box w={["3%" , "2%"]} >
-           <Box w="350px">
-       
+  {countries.length > 0 && (
       <Select onChange={handleCountryChange} value={selectedCountry}       sx={{
+              appearance: "none",
+              WebkitAppearance: "none",
+              MozAppearance: "none",
+              backgroundImage: "none", 
               width: '200px', 
               border: '2px solid gray.200', 
               borderRadius: 'md', 
@@ -59,13 +62,13 @@ function App() {
             placeholder="Bir ülke seçin" 
           >  
         {countries.map((country) => (
-          <option key={country} value={country}>{country}</option>
+          <option key={country} value={country} >{country}</option>
         ))}  
        
        
       </Select>
 
-       </Box>
+       )}
     
 </Box>
  </Flex>
